@@ -911,6 +911,44 @@
                 "resourcePath": "scripts\\direction_from_vector\\direction_from_vector.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "086ed388-22ea-4d2e-96aa-df9877fc333d",
+            "Value": {
+                "id": "40ed9acf-4547-445d-8a39-6f6af5a2b6d6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\mdl_render\\mdl_render.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f439d627-f53e-4ac0-b578-700bdea9553c",
+            "Value": {
+                "id": "14de0ad6-b9cb-4d2e-9584-cbcc435339f4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "shaders\\shd_shadow\\shd_shadow.yy",
+                "resourceType": "GMShader"
+            }
         }
     ],
     "room_order": [
@@ -928,7 +966,8 @@
         "8eb64a20-28c0-4f08-b686-724e0df647e7",
         "64e31ec7-15c7-4f79-be42-0ee08a1316db",
         "8f6fa962-93ee-435e-8b94-d9ca449b91ff",
-        "fca7a9df-c90e-492c-884e-54f3372ec8d5"
+        "fca7a9df-c90e-492c-884e-54f3372ec8d5",
+        "086ed388-22ea-4d2e-96aa-df9877fc333d"
     ],
     "tutorial": ""
 }
