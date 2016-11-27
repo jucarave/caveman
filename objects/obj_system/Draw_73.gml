@@ -16,3 +16,12 @@ for (var i=1,len=array_length_1d(draw_models);i<len;i++) {
 }
 
 shader_reset();
+
+/*if (!surface_exists(surface)) {
+	surface = surface_create(1024, 1024);
+}
+
+surface_set_target(surface);
+//draw_surface(application_surface, 0, 0);
+draw_rectangle(0, 0, 32, 32, false);
+surface_reset_target();*/

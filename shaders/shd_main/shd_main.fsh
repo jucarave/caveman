@@ -3,5 +3,5 @@ varying vec4 vColor;
 
 void main()
 {
-    gl_FragColor = vColor * vLightWeight;
+    gl_FragColor = vec4(vColor.rgb * vLightWeight, 1.0);
 }

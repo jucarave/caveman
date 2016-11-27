@@ -12,12 +12,13 @@ if (keyboard_check(ord("S"))){ yTo = 1.0; }
 
 if (xTo != 0 || yTo != 0) {
 	var vec = normalize(xTo, yTo, 0.0);
+	var dir = round((direction_from_vector(vec[0], vec[1]) + (obj_camera.direction + 90)) mod 360);
 	
-	x += vec[0] * mv_spd;
-	y += vec[1] * mv_spd;
-	
-	rotate_to = direction_from_vector(vec[0], vec[1]);
+	rotate_to = dir;
 	rotate_spd = 15 * sign(angle_difference(rotate_to, direction));
+	
+	x += cos(degtorad(dir)) * mv_spd;
+	y += -sin(degtorad(dir)) * mv_spd;
 	
 	requires_update = true;
 }

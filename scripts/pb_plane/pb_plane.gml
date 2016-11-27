@@ -14,11 +14,11 @@ buffer = vertex_create_buffer();
 vertex_begin(buffer, global.VERTEX_FORMAT);
 
 pb_position_normal_color(buffer,	-w, -h,  0,		0,  0,  1,		c_white, 1.0);
+pb_position_normal_color(buffer,	 w,  h,  0,		0,  0,  1,		c_white, 1.0);
 pb_position_normal_color(buffer,	-w,  h,  0,		0,  0,  1,		c_white, 1.0);
-pb_position_normal_color(buffer,	 w,  h,  0,		0,  0,  1,		c_white, 1.0);
 pb_position_normal_color(buffer,	-w, -h,  0,		0,  0,  1,		c_white, 1.0);
-pb_position_normal_color(buffer,	 w,  h,  0,		0,  0,  1,		c_white, 1.0);
 pb_position_normal_color(buffer,	 w, -h,  0,		0,  0,  1,		c_white, 1.0);
+pb_position_normal_color(buffer,	 w,  h,  0,		0,  0,  1,		c_white, 1.0);
 
 vertex_end(buffer);
 

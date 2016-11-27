@@ -4,6 +4,9 @@
 if (rotate_to != direction) {
 	direction += rotate_spd;
 	requires_update = true;
+	if (abs(direction - rotate_to) < rotate_spd){
+		direction = rotate_to;
+	}
 }
 
 // Fall for gravity
@@ -22,5 +25,6 @@ if (z_gravity > 0) {
 
 if (requires_update) {
 	event_user(0);
+	with (obj_camera) { event_user(0); } 
 	requires_update = false;
 }

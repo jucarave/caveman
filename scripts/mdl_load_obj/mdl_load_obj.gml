@@ -8,7 +8,7 @@ var filename = argument[0],
 	vertices = array_1d(0), 
 	normals = array_1d(0),
 	materials = array_1d(0),
-	order = array_1d(0, 2, 1);
+	order = array_1d(0, 1, 2);
 
 if (!file_exists(filename)){
 	show_message("Model [" + filename + "] was not found!");
