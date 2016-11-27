@@ -6,3 +6,7 @@ var p = obj_player,
 m_view = matrix_build_lookat(_x, _y, p.z+15, p.x, p.y, p.z, 0, 0, 1);
 
 requires_update = false;
+
+with (obj_system) {
+	event_user(0);
+}

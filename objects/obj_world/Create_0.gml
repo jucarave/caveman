@@ -1,5 +1,6 @@
 /// @description Creates the world model
 
-buffer = pb_plane(16.0, 16.0, 1.0, 1.0);
+plane = pb_plane(160.0, 160.0, c_white);
+cube = pb_cube(2.0, 2.0, 8.0, c_green);
 
 m_world = matrix_build_identity();

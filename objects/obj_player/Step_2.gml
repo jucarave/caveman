@@ -4,7 +4,7 @@
 if (rotate_to != direction) {
 	direction += rotate_spd;
 	requires_update = true;
-	if (abs(direction - rotate_to) < rotate_spd){
+	if (abs(direction - rotate_to) < abs(rotate_spd)){
 		direction = rotate_to;
 	}
 }

@@ -12,7 +12,7 @@ void main() {
 		float shadowDepth = texture2D(uShadowMap, vLightScreen).r;
 		float pixelDepth = 1.0 - ((vLightPosition.z / vLightPosition.w) * 0.01);
 		
-		if (pixelDepth < shadowDepth - 0.01){
+		if (pixelDepth < shadowDepth - 0.005){
 			lightWeight = 0.0;
 		}
 	}
