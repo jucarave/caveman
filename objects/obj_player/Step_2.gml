@@ -1,16 +1,23 @@
 /// @description Checks if the model requires to update its transformation matrix
 
+// Rotate tween animation
 if (rotate_to != direction) {
 	direction += rotate_spd;
 	requires_update = true;
+}
+
+// Fall for gravity
+if (z_gravity > 0) {
+	z += z_speed;
+	z_speed -= z_gravity;
+	requires_update = true;
 	
-	/*if (rotate_spd > 0 && direction > rotate_to) {
-		direction = rotate_to;
-		rotate_spd = 0;
-	}else if (rotate_spd < 0 && direction < rotate_to) {
-		direction = rotate_to;
-		rotate_spd = 0;
-	}*/
+	if (z_speed < 0 && z < 0) {
+		z = 0.0;
+		z_speed = 0.0;
+		z_gravity = 0.0;
+		jump = 0;
+	}
 }
 
 if (requires_update) {

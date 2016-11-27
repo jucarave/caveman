@@ -21,3 +21,10 @@ if (xTo != 0 || yTo != 0) {
 	
 	requires_update = true;
 }
+
+// Player Jump control
+if (keyboard_check_pressed(vk_space) && jump == 0) {
+	jump = 1;
+	z_speed = 1;
+	z_gravity = 0.1;
+}
