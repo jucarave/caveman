@@ -1,0 +1,27 @@
+// Alpha 0.1
+
+################TODO####################
+
+1) "Box" animals wandering around
+2) Collision system
+3) Basic attack system, kill animals
+4) Map from texture height
+5) Render by areas
+6) Obtain resources from animals
+7) Attack trees for food
+8) Health and aging system
+9) Eat food, restore health
+10) AI, attack player after he attacked first
+11) Make animals flee if chances are against them or if they are passive
+
+################DONE####################
+
+1) 3D rendering
+2) Keyboard movement
+3) Jumping
+4) Import models from .obj
+5) Use Blender materials group for per vertex color
+6) Rotate player to new direction
+7) Camera follow the player
+8) Shadow mapping
+9) Update shadow map when needed

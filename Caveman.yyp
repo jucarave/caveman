@@ -949,6 +949,44 @@
                 "resourcePath": "shaders\\shd_shadow\\shd_shadow.yy",
                 "resourceType": "GMShader"
             }
+        },
+        {
+            "Key": "7cbedfba-ceba-446b-8b23-891c90f788df",
+            "Value": {
+                "id": "5338c478-a95c-42fa-b074-ecdd1f9623e3",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\\7cbedfba-ceba-446b-8b23-891c90f788df.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b222ffa6-9fbf-4f14-a9d1-a2d4c5cadf10",
+            "Value": {
+                "id": "f076f3ac-1635-40f3-9832-faa927b6d0a4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "notes\\A_0_1.yy",
+                "resourceType": "GMNotes"
+            }
         }
     ],
     "room_order": [
