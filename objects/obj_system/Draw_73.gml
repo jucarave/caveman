@@ -20,6 +20,8 @@ if (light_update) {
 		var m_view = matrix_multiply(mdl[MDL_MATRIX], light_view);
 	
 		matrix_set(matrix_view, m_view);
+		
+		shader_set_uniform_f_array(global.LIGHT_POSITION_OFFSET, mdl[MDL_OFFSET]);
 
 		vertex_submit(mdl[MDL_MODEL], pr_trianglelist, -1);
 	}
@@ -48,22 +50,10 @@ for (var i=1,len=array_length_1d(draw_models);i<len;i++) {
 	m_view = matrix_multiply(mdl[MDL_MATRIX], light_view);
 	shader_set_uniform_matrix_array(global.LIGHT_VIEW, m_view);
 	shader_set_uniform_matrix_array(global.LIGHT_PROJECTION, light_ortho);
+	
+	shader_set_uniform_f_array(global.POSITION_OFFSET, mdl[MDL_OFFSET]);
 
 	vertex_submit(mdl[MDL_MODEL], pr_trianglelist, -1);
 }
 
 shader_reset();
-
-/*matrix_set(matrix_projection, m_projection_ortho);
-matrix_set(matrix_view, m_view_ortho);
-
-if (!surface_exists(light_surface)) {
-	light_surface = surface_create(1024, 512);
-}
-
-surface_set_target(light_surface);
-draw_clear_alpha(c_black, 0);
-draw_surface(application_surface, 0, 0);
-surface_reset_target();
-
-draw_surface(light_surface, 0, 0);*/

@@ -2,6 +2,7 @@
 
 ################TODO####################
 
+0) Draw models with position offset
 1) "Box" animals wandering around
 2) Collision system
 3) Basic attack system, kill animals

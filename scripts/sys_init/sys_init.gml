@@ -1,7 +1,8 @@
 // Macros definitions
 #macro MDL_MODEL 0
 #macro MDL_MATRIX 1
-#macro MDL_CAST_SHADOW 2
+#macro MDL_OFFSET 2
+#macro MDL_CAST_SHADOW 3
 
 // Vertex format
 vertex_format_begin();
@@ -20,3 +21,9 @@ global.LIGHT_DIRECTION = shader_get_uniform(shd_main, "uLightDirection");
 global.SHADOW_MAP = shader_get_sampler_index(shd_main, "uShadowMap");
 global.LIGHT_VIEW = shader_get_uniform(shd_main, "uLightView");
 global.LIGHT_PROJECTION = shader_get_uniform(shd_main, "uLightProj");
+global.POSITION_OFFSET = shader_get_uniform(shd_main, "uPosition");
+
+global.LIGHT_POSITION_OFFSET = shader_get_uniform(shd_shadow, "uPosition");
+
+// Commons
+global.NO_OFFSET = array_1d(0, 0, 0);
