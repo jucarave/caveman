@@ -13,6 +13,6 @@ m_view_ortho = matrix_get(matrix_view);
 // Sun Light
 light_surface = surface_create(2048, 2048);
 light_direction = normalize(-1, -1, -1);
-light_view = matrix_build_lookat(20, 20, 20, 0, 0, 0, 0, 0, 1);
-light_ortho = matrix_build_projection_ortho(64.0, 64.0, 0.01, 100.0);
+light_view = matrix_build_lookat(40, 40, 40, 0, 0, 0, 0, 0, 1);
+light_ortho = matrix_build_projection_ortho(96.0, 96.0, 0.01, 300.0);
 light_update = true;

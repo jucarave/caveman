@@ -2,7 +2,6 @@
 
 ################TODO####################
 
-0) Draw models with position offset
 1) "Box" animals wandering around
 2) Collision system
 3) Basic attack system, kill animals
@@ -26,3 +25,4 @@
 7) Camera follow the player
 8) Shadow mapping
 9) Update shadow map when needed
+10) Draw models with position offset
