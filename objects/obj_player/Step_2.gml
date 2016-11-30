@@ -9,6 +9,8 @@ if (rotate_to != direction) {
 	}
 }
 
+z = sys_get_height(obj_world.height_map, x, y);
+
 // Fall for gravity
 if (z_gravity > 0) {
 	z += z_speed;

@@ -76,4 +76,4 @@ file_text_close(file);
 
 vertex_end(mdl);
 
-return mdl;
+return [mdl, vertices];

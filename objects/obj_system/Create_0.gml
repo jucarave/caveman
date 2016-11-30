@@ -16,3 +16,6 @@ light_direction = normalize(-1, -1, -1);
 light_view = matrix_build_lookat(40, 40, 40, 0, 0, 0, 0, 0, 1);
 light_ortho = matrix_build_projection_ortho(96.0, 96.0, 0.01, 300.0);
 light_update = true;
+
+// Map Terrain
+terrain = pb_terrain(spr_heightmap, 5);

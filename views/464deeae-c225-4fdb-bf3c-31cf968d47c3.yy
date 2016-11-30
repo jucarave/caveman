@@ -6,7 +6,7 @@
     "children": [
         "8f6fa962-93ee-435e-8b94-d9ca449b91ff",
         "fca7a9df-c90e-492c-884e-54f3372ec8d5",
-        "086ed388-22ea-4d2e-96aa-df9877fc333d"
+        "82efa977-d42b-44e2-a68b-849eddfb2a51"
     ],
     "filterType": "GMScript",
     "folderName": "models",

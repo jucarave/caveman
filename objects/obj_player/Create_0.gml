@@ -2,12 +2,13 @@
 
 // Player model
 buffer = mdl_load_obj("models/capsule.obj");
+buffer = buffer[0];
 
 // Player transform matrix
 m_world = matrix_build_identity();
 
 // 3D variables
-z = 0.0;
+z = 30.0;
 z_speed = 0.0;
 z_gravity = 0.0;
 

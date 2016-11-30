@@ -13,6 +13,7 @@
 9) Eat food, restore health
 10) AI, attack player after he attacked first
 11) Make animals flee if chances are against them or if they are passive
+12) Composite drawing (merge trees ans stuffs)
 
 ################DONE####################
 
@@ -26,3 +27,10 @@
 8) Shadow mapping
 9) Update shadow map when needed
 10) Draw models with position offset
+
+################NOTE####################
+
+* Shadow is crossing through multiple levels of terrain
+* Shadow distance is short when the player is high
+* Shadow distance is showing as shadow, change to light (?)
+* Delete models buffer at the end

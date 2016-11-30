@@ -27,3 +27,4 @@ global.LIGHT_POSITION_OFFSET = shader_get_uniform(shd_shadow, "uPosition");
 
 // Commons
 global.NO_OFFSET = array_1d(0, 0, 0);
+global.GRID_SIZE = 8;
