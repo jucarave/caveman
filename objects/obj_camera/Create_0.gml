@@ -3,7 +3,7 @@
 // Camera properties
 fov = 60;
 near = 0.01;
-far = 100.0;
+far = 200.0;
 ratio = window_get_width() / window_get_height();
 
 // Creates projection matriz

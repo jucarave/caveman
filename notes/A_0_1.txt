@@ -2,18 +2,19 @@
 
 ################TODO####################
 
-1) "Box" animals wandering around
-2) Collision system
-3) Basic attack system, kill animals
-4) Map from texture height
-5) Render by areas
-6) Obtain resources from animals
-7) Attack trees for food
-8) Health and aging system
-9) Eat food, restore health
-10) AI, attack player after he attacked first
-11) Make animals flee if chances are against them or if they are passive
-12) Composite drawing (merge trees ans stuffs)
+-) Global meshes loader
+-) "Box" animals wandering around
+-) Collision system
+-) Basic attack system, kill animals
+-) Render by areas
+-) Obtain resources from animals
+-) Attack trees for food
+-) Health and aging system
+-) Eat food, restore health
+-) AI, attack player after he attacked first
+-) Make animals flee if chances are against them or if they are passive
+-) Composite drawing (merge trees ans stuffs)
+-) Component based instances
 
 ################DONE####################
 
@@ -27,10 +28,14 @@
 8) Shadow mapping
 9) Update shadow map when needed
 10) Draw models with position offset
+11) Map from texture height
+12) Distance fog
 
 ################NOTE####################
 
-* Shadow is crossing through multiple levels of terrain
 * Shadow distance is short when the player is high
-* Shadow distance is showing as shadow, change to light (?)
 * Delete models buffer at the end
+* Avoid camera clipping on the ground
+* Cache player min Z
+* Jump not working anymore
+* Remove array_1d script

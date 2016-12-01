@@ -22,6 +22,7 @@ global.SHADOW_MAP = shader_get_sampler_index(shd_main, "uShadowMap");
 global.LIGHT_VIEW = shader_get_uniform(shd_main, "uLightView");
 global.LIGHT_PROJECTION = shader_get_uniform(shd_main, "uLightProj");
 global.POSITION_OFFSET = shader_get_uniform(shd_main, "uPosition");
+global.PLAYER_POSITION = shader_get_uniform(shd_main, "uPlayerPosition");
 
 global.LIGHT_POSITION_OFFSET = shader_get_uniform(shd_shadow, "uPosition");
 

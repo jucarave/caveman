@@ -9,6 +9,7 @@ uniform vec3 uLightDirection;
 uniform vec3 uPosition;
 
 varying float vLightWeight;
+varying vec3 vPosition;
 varying vec4 vColor;
 varying vec4 vLightPosition;
 varying vec2 vLightScreen;
@@ -20,6 +21,8 @@ void main() {
 	vec3 lclNormal =  normalize((uMMatrix * vec4(in_Normal, 0.0)).xyz);
 	
 	vLightWeight = max(dot(lclNormal, -uLightDirection), 0.0);
+	
+	vPosition = (uMMatrix * nPos).xyz;
 	
 	vColor = in_Colour;
 	vLightPosition = uLightView * nPos;

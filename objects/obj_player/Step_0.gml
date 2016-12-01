@@ -29,3 +29,8 @@ if (keyboard_check_pressed(vk_space) && jump == 0) {
 	z_speed = 1;
 	z_gravity = 0.1;
 }
+
+// Place Tree
+if (keyboard_check_pressed(ord("U"))) {
+	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z];
+}

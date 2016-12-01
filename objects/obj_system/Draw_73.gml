@@ -37,6 +37,7 @@ shader_set(shd_main);
 matrix_set(matrix_projection, obj_camera.m_projection);
 
 shader_set_uniform_f_array(global.LIGHT_DIRECTION, light_direction);
+shader_set_uniform_f(global.PLAYER_POSITION, obj_player.x, obj_player.y, obj_player.z);
 texture_set_stage(global.SHADOW_MAP, surface_get_texture(light_surface));
 
 for (var i=1,len=array_length_1d(draw_models);i<len;i++) {
