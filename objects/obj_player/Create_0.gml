@@ -16,7 +16,7 @@ z_gravity = 0.0;
 requires_update = true;
 
 // Movement speed
-mv_spd = 0.3;
+mv_spd = 0.7;
 
 // is Jumping
 jump = 0;

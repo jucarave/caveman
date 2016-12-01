@@ -15,13 +15,13 @@ void main() {
 		float pixelDepth = 1.0 - ((vLightPosition.z / vLightPosition.w) * 0.003);
 		
 		if (pixelDepth < shadowDepth - 0.003){
-			lightWeight = 0.0;
+			lightWeight *= 0.5;
 		}
 	}
 	
 	float fog = clamp(1.0 - (100.0 - length(vPosition - uPlayerPosition)) / (20.0), 0.0, 1.0);
 	
-	lightWeight = max(lightWeight, 0.1);
+	lightWeight = max(lightWeight, 0.2);
 	
 	vec3 col = vColor.rgb * lightWeight;
 	col = mix(col, vec3(1.0), fog);
