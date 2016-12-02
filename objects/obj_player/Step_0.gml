@@ -20,6 +20,12 @@ if (xTo != 0 || yTo != 0) {
 	x += cos(degtorad(dir)) * mv_spd;
 	y += -sin(degtorad(dir)) * mv_spd;
 	
+	// Sets the minimum position the player can be
+	base_z = sys_get_height(obj_world.height_map, x, y);
+	if (base_z > z) { 
+		z = base_z; 
+	}
+	
 	requires_update = true;
 }
 
@@ -30,7 +36,22 @@ if (keyboard_check_pressed(vk_space) && jump == 0) {
 	z_gravity = 0.1;
 }
 
+// Check if player is on air
+if (base_z < z) {
+	z_gravity = 0.1;
+}
+
 // Place Tree
 if (keyboard_check_pressed(ord("U"))) {
-	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z];
+	var model = obj_world.tree_model;
+	if (irandom(10) < 4) {
+		model = obj_world.tree_model_2;
+	}
+	
+	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, model, true];
+}
+
+// Place Fern
+if (keyboard_check_pressed(ord("I"))) {
+	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, obj_world.fern, false];
 }

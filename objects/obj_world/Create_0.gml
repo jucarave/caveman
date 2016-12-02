@@ -9,6 +9,13 @@ plane = plane[0];
 // Trees
 tree_model = mdl_load_obj("models/tree.obj");
 tree_model = tree_model[0];
+
+tree_model_2 = mdl_load_obj("models/tree_2.obj");
+tree_model_2 = tree_model_2[0];
+
+fern = mdl_load_obj("models/fern.obj");
+fern = fern[0];
+
 trees = [];
 
 // Animals

@@ -13,7 +13,7 @@ if (light_update) {
 
 	matrix_set(matrix_projection, light_ortho);
 
-	for (var i=1,len=array_length_1d(draw_models);i<len;i++) {
+	for (var i=0,len=array_length_1d(draw_models);i<len;i++) {
 		var mdl = draw_models[i];
 		if (!mdl[MDL_CAST_SHADOW]){ continue; }
 	
@@ -21,7 +21,8 @@ if (light_update) {
 	
 		matrix_set(matrix_view, m_view);
 		
-		shader_set_uniform_f_array(global.LIGHT_POSITION_OFFSET, mdl[MDL_OFFSET]);
+		var os = mdl[MDL_OFFSET];
+		shader_set_uniform_f(global.LIGHT_POSITION_OFFSET, os[0], os[1], os[2]);
 
 		vertex_submit(mdl[MDL_MODEL], pr_trianglelist, -1);
 	}
@@ -40,7 +41,7 @@ shader_set_uniform_f_array(global.LIGHT_DIRECTION, light_direction);
 shader_set_uniform_f(global.PLAYER_POSITION, obj_player.x, obj_player.y, obj_player.z);
 texture_set_stage(global.SHADOW_MAP, surface_get_texture(light_surface));
 
-for (var i=1,len=array_length_1d(draw_models);i<len;i++) {
+for (var i=0,len=array_length_1d(draw_models);i<len;i++) {
 	var mdl = draw_models[i],
 		m_view = matrix_multiply(mdl[MDL_MATRIX], obj_camera.m_view);
 	
@@ -52,9 +53,15 @@ for (var i=1,len=array_length_1d(draw_models);i<len;i++) {
 	shader_set_uniform_matrix_array(global.LIGHT_VIEW, m_view);
 	shader_set_uniform_matrix_array(global.LIGHT_PROJECTION, light_ortho);
 	
-	shader_set_uniform_f_array(global.POSITION_OFFSET, mdl[MDL_OFFSET]);
+	var os = mdl[MDL_OFFSET];
+	shader_set_uniform_f(global.POSITION_OFFSET, os[0], os[1], os[2]);
 
 	vertex_submit(mdl[MDL_MODEL], pr_trianglelist, -1);
 }
 
 shader_reset();
+
+matrix_set(matrix_projection, m_projection_ortho);
+matrix_set(matrix_view, m_view_ortho);
+
+draw_surface_ext(light_surface, 0, 0, 0.1, 0.1, 0, c_white, 1);

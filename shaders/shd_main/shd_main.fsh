@@ -19,7 +19,7 @@ void main() {
 		}
 	}
 	
-	float fog = clamp(1.0 - (100.0 - length(vPosition - uPlayerPosition)) / (20.0), 0.0, 1.0);
+	float fog = clamp(1.0 - (150.0 - length(vPosition - uPlayerPosition)) / (30.0), 0.0, 1.0);
 	
 	lightWeight = max(lightWeight, 0.2);
 	

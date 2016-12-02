@@ -2,7 +2,7 @@
 
 sys_init();
 
-draw_models = array_1d(noone);
+draw_models = [];
 
 room_goto_next();
 
@@ -14,7 +14,7 @@ m_view_ortho = matrix_get(matrix_view);
 light_surface = surface_create(2048, 2048);
 light_direction = normalize(-1, -1, -1);
 light_view = matrix_build_lookat(40, 40, 40, 0, 0, 0, 0, 0, 1);
-light_ortho = matrix_build_projection_ortho(128.0, 128.0, 0.01, 300.0);
+light_ortho = matrix_build_projection_ortho(200.0, 200.0, 0.01, 300.0);
 light_update = true;
 
 // Map Terrain

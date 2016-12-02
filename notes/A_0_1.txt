@@ -35,7 +35,6 @@
 
 * Shadow distance is short when the player is high
 * Delete models buffer at the end
-* Avoid camera clipping on the ground
-* Cache player min Z
-* Jump not working anymore
-* Remove array_1d script
+* Backface lighting
+* Hue Shifting shadows and light
+* Rotate object towards surface normal

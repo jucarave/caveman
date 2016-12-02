@@ -5,10 +5,10 @@ var filename = argument[0],
 	mdl = vertex_create_buffer(),
 	file, line, type, face, vertex, mat, color, alpha,
 	v, n, order,
-	vertices = array_1d(0), 
-	normals = array_1d(0),
-	materials = array_1d(0),
-	order = array_1d(0, 1, 2);
+	vertices = [0], 
+	normals = [0],
+	materials = [0],
+	order = [0, 1, 2];
 
 if (!file_exists(filename)){
 	show_message("Model [" + filename + "] was not found!");

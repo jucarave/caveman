@@ -21,6 +21,7 @@ void main() {
 	vec3 lclNormal =  normalize((uMMatrix * vec4(in_Normal, 0.0)).xyz);
 	
 	vLightWeight = max(dot(lclNormal, -uLightDirection), 0.0);
+	//vLightWeight = (vLightWeight + 1.0) / 2.0;
 	
 	vPosition = (uMMatrix * nPos).xyz;
 	

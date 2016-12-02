@@ -8,7 +8,8 @@ buffer = buffer[0];
 m_world = matrix_build_identity();
 
 // 3D variables
-z = 30.0;
+base_z = 0.0;
+z = 0.0;
 z_speed = 0.0;
 z_gravity = 0.0;
 

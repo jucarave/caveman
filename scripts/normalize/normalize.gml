@@ -9,4 +9,4 @@ var _x = argument[0],
 	
 	l = sqrt(_x * _x + _y * _y + _z * _z);
 	
-return array_1d(_x / l, _y / l, _z / l);
+return [_x / l, _y / l, _z / l];

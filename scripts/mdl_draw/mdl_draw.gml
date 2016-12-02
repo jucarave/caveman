@@ -5,7 +5,7 @@
 /// @param castShadow
 
 var ind = array_length_1d(obj_system.draw_models),
-	mdl = array_1d(0);
+	mdl = [0];
 
 mdl[MDL_MODEL]			= argument[0];
 mdl[MDL_MATRIX]			= argument[1];

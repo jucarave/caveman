@@ -457,25 +457,6 @@
             }
         },
         {
-            "Key": "910cc372-fa0d-4340-8ee9-a22e1dd49730",
-            "Value": {
-                "id": "8f171cd4-cbfb-4f11-a560-50fa07e1f693",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\\array_1d\\array_1d.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "d9d86ff6-85d1-41e1-ba7c-52b269aebd3b",
             "Value": {
                 "id": "60cfde68-6247-44e5-8608-9c32f67e6f78",
@@ -913,9 +894,9 @@
             }
         },
         {
-            "Key": "616b9cc0-c1c2-470e-bbe2-922ba080a888",
+            "Key": "e2b9a78c-5caa-4a25-b471-1bc5b62598db",
             "Value": {
-                "id": "32a61353-930b-405b-97ca-f2c2c9436474",
+                "id": "0aec75e9-e8a7-4202-8638-f0a4f16256d1",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -1158,6 +1139,44 @@
                 "resourcePath": "scripts\\sys_get_height\\sys_get_height.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "01069f1d-fb43-4390-8914-78e138c4a73d",
+            "Value": {
+                "id": "81a1e08d-e0b4-465f-bc33-966076c0e2c9",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "datafiles_yy\\models\\tree_2.obj.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "6dea7309-9fc9-420d-85e8-db16b767e327",
+            "Value": {
+                "id": "06eb8757-59dc-478a-b0f6-732ff28b8497",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "datafiles_yy\\models\\fern.obj.yy",
+                "resourceType": "GMIncludedFile"
+            }
         }
     ],
     "room_order": [
@@ -1165,7 +1184,6 @@
         "2ad29245-4e4e-4e6a-935d-ba2385250e97"
     ],
     "script_order": [
-        "910cc372-fa0d-4340-8ee9-a22e1dd49730",
         "76882010-f8b8-4dd8-8f1f-cd3525335ecf",
         "5f8894c5-671b-471c-8f8f-3e0d88e3d057",
         "f46722de-85f0-43fd-8ce7-950c24666dfb",
