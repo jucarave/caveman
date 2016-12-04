@@ -53,5 +53,5 @@ if (keyboard_check_pressed(ord("U"))) {
 
 // Place Fern
 if (keyboard_check_pressed(ord("I"))) {
-	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, obj_world.fern, false];
+	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, obj_world.fern, true];
 }

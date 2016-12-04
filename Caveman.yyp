@@ -1160,9 +1160,9 @@
             }
         },
         {
-            "Key": "6dea7309-9fc9-420d-85e8-db16b767e327",
+            "Key": "ffd7590b-f8c9-4806-be04-0c72e0fbf10b",
             "Value": {
-                "id": "06eb8757-59dc-478a-b0f6-732ff28b8497",
+                "id": "832459d0-64c1-4578-abd7-6297576bafa8",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -1177,6 +1177,44 @@
                 "resourcePath": "datafiles_yy\\models\\fern.obj.yy",
                 "resourceType": "GMIncludedFile"
             }
+        },
+        {
+            "Key": "27d040e0-c877-4838-99e0-cc817646a586",
+            "Value": {
+                "id": "5d526005-5718-4f8a-b32c-c9a34ce413fa",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\sys_shadow_pass\\sys_shadow_pass.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3f1fd008-baa1-4120-bc0d-ca12adb9f2e5",
+            "Value": {
+                "id": "564e8155-9354-4ae8-9e96-a80633228f19",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\create_ortho\\create_ortho.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -1189,6 +1227,7 @@
         "f46722de-85f0-43fd-8ce7-950c24666dfb",
         "db192afa-475a-49bd-ab31-d87093bf9b2e",
         "39cb5e52-76bf-4e51-9f01-c20beabd6dea",
+        "3f1fd008-baa1-4120-bc0d-ca12adb9f2e5",
         "4523e754-93fe-4f4b-87d4-d581d06d3507",
         "c8b8745e-b542-49ad-a646-d93270d2f4d7",
         "8eb64a20-28c0-4f08-b686-724e0df647e7",
@@ -1196,6 +1235,7 @@
         "64e31ec7-15c7-4f79-be42-0ee08a1316db",
         "c2577b37-ea23-45a7-bd09-1beb93fb50bf",
         "bbb3338e-9874-4153-91f5-fc87fc28fef9",
+        "27d040e0-c877-4838-99e0-cc817646a586",
         "8f6fa962-93ee-435e-8b94-d9ca449b91ff",
         "fca7a9df-c90e-492c-884e-54f3372ec8d5"
     ],

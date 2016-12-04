@@ -23,10 +23,12 @@ void main() {
 	vLightWeight = max(dot(lclNormal, -uLightDirection), 0.0);
 	//vLightWeight = (vLightWeight + 1.0) / 2.0;
 	
+	//vPosition = (gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * nPos).xyz;
 	vPosition = (uMMatrix * nPos).xyz;
 	
 	vColor = in_Colour;
-	vLightPosition = uLightView * nPos;
+	vLightPosition = uLightProj * uLightView * nPos;
+	//vLightPosition = uLightView * nPos;
 	
 	vLightScreen = (uLightProj * uLightView * nPos).xy;
 	vLightScreen = (vLightScreen + vec2(1.0)) / 2.0;

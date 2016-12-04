@@ -12,10 +12,13 @@ m_view_ortho = matrix_get(matrix_view);
 
 // Sun Light
 light_surface = surface_create(2048, 2048);
-light_direction = normalize(-1, -1, -1);
-light_view = matrix_build_lookat(40, 40, 40, 0, 0, 0, 0, 0, 1);
-light_ortho = matrix_build_projection_ortho(200.0, 200.0, 0.01, 300.0);
+light_direction = normalize(0, -1, -1);
+light_view = matrix_build_lookat(5, 5, 5, 0, 0, 0, 0, 0, 1);
+//light_ortho = matrix_build_projection_ortho(200.0, 200.0, -100.0, 300.0);
+light_ortho = create_ortho(200.0, 200.0, -50.0, 50.0);
 light_update = true;
+
+show_debug_message(light_ortho);
 
 // Map Terrain
 terrain = pb_terrain(spr_heightmap, 5);
