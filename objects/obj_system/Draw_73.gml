@@ -36,7 +36,7 @@ shader_reset();
 matrix_set(matrix_projection, m_projection_ortho);
 matrix_set(matrix_view, m_view_ortho);
 
-//draw_surface_ext(light_surface, 0, 0, 128/2048, 128/2048, 0, c_white, 1);
+draw_surface_ext(light_surface, 0, 0, 128/2048, 128/2048, 0, c_white, 1);
 
 draw_set_color(c_black);
 draw_text(32, 480 - 32, "FPS = " + string(fps_real));

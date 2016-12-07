@@ -8,6 +8,7 @@ var filename = argument[0],
 	vertices = [0], 
 	normals = [0],
 	materials = [0],
+	triangles = [],
 	order = [0, 1, 2];
 
 if (!file_exists(filename)){
@@ -66,6 +67,8 @@ while (!file_text_eof(file)) {
 			vertex = string_explode_real(face[order[i]], "/");
 			v = vertices[vertex[0]];
 			n = normals[vertex[1]];
+			
+			triangles[array_length_1d(triangles)] = v;
 		
 			pb_position_normal_color(mdl,	v[0], v[1], v[2],		n[0], n[1], n[2],		color, alpha);
 		}
@@ -76,4 +79,4 @@ file_text_close(file);
 
 vertex_end(mdl);
 
-return [mdl, vertices];
+return [mdl, vertices, triangles];

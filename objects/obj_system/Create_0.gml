@@ -18,7 +18,5 @@ light_view = matrix_build_lookat(5, 5, 5, 0, 0, 0, 0, 0, 1);
 light_ortho = create_ortho(200.0, 200.0, -50.0, 50.0);
 light_update = true;
 
-show_debug_message(light_ortho);
-
 // Map Terrain
 terrain = pb_terrain(spr_heightmap, 5);

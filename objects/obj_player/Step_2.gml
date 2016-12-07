@@ -10,7 +10,7 @@ if (rotate_to != direction) {
 }
 
 // Fall for gravity
-if (z_gravity > 0) {
+/*if (z_gravity > 0) {
 	z += z_speed;
 	z_speed -= z_gravity;
 	requires_update = true;
@@ -21,7 +21,7 @@ if (z_gravity > 0) {
 		z_gravity = 0.0;
 		jump = 0;
 	}
-}
+}*/
 
 if (requires_update) {
 	event_user(0);

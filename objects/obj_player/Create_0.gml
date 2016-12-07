@@ -1,8 +1,12 @@
 /// @description Creates the model and 3D variables
 
 // Player model
-buffer = mdl_load_obj("models/capsule.obj");
-buffer = buffer[0];
+var model = mdl_load_obj("models/capsule.obj");
+buffer = model[0];
+bounding_box = cs_calculate_bbox(model[1]);
+ellipse_collision = [1, 1, 2.5];
+
+show_debug_message(bounding_box);
 
 // Player transform matrix
 m_world = matrix_build_identity();
