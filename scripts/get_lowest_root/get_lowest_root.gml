@@ -12,6 +12,7 @@ var a = argument[0],
 var determinant = b * b  - 4 * a * c;
 
 // If determinant is negative then there is no solution
+if (determinant == -0.0) { determinant = 0.0; }
 if (determinant < 0.0) { return noone; }
 
 // Calculate the two roots

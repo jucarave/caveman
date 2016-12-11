@@ -5,32 +5,15 @@
 /// @param mesh_position
 /// @param triangles_list
 
-var position = argument[0],
+var es_position = argument[0],
 	ellipse_size = argument[1],
-	velocity = argument[2],
+	es_velocity = argument[2],
 	mp = argument[3],
 	triangles = argument[4],
 	len,
-	es_position, es_velocity,
 	ret = noone, min_distance = 10000,
-	velocity_length = vector_length(velocity);
+	velocity_length = vector_length(es_velocity);
 	
-// Center the point in the ellipse
-position[2] += ellipse_size[2];	
-
-// Set position and velocity to eSpace
-es_position = [
-	position[0] / ellipse_size[0],
-	position[1] / ellipse_size[1],
-	position[2] / ellipse_size[2]
-];
-
-es_velocity = [
-	velocity[0] / ellipse_size[0],
-	velocity[1] / ellipse_size[1],
-	velocity[2] / ellipse_size[2]
-];
-
 for (var i=0,len=array_length_1d(triangles);i<len;i+=3) {
 	var t1 = triangles[i],
 		t2 = triangles[i + 1],
@@ -48,6 +31,7 @@ for (var i=0,len=array_length_1d(triangles);i<len;i+=3) {
 		var dist_to_col = hit[1] * velocity_length;
 		if (dist_to_col < min_distance) {
 			ret = hit;
+			min_distance = dist_to_col;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 /// @description Creates the ramp object buffer
 
-var model = mdl_load_obj("models/ramp_2t.obj");
+var model = mdl_load_obj("models/ramp.obj");
 buffer = model[0];
 bounding_box = cs_calculate_bbox(model[1]);
 solid_mesh = model[2];

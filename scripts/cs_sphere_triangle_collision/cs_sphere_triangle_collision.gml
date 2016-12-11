@@ -10,7 +10,7 @@ var position = argument[0],
 // Get the plane equation and the signed distance from the sphere to the plane
 var plane = get_triangle_plane(triangle),
 	normal = plane[0],
-	n_dot_vel = dot_product_3d(velocity[0], velocity[1], velocity[2], normal[0], normal[1], normal[2]),
+	n_dot_vel = dot(velocity, normal),
 	psd = plane_signed_distance(position, normal, plane[1]),
 	t0 = 0, t1 = 1;
 	
@@ -42,7 +42,8 @@ if (n_dot_vel != 0) {
 	if (cs_point_in_triangle(intersection_point, triangle)) {
 		return [
 			intersection_point,
-			t0
+			t0,
+			t0 * vector_length(velocity)
 		];
 	}
 } else if (abs(psd) >= 1) {
@@ -52,7 +53,7 @@ if (n_dot_vel != 0) {
 	
 // Check for collision against vertices
 // Quadratic helper
-var velocity_squared_length = dot_product_3d(velocity[0], velocity[1], velocity[2], velocity[0], velocity[1], velocity[2]),
+var velocity_squared_length = dot(velocity, velocity),
 	a, b, c, t = 1,
 	found_collision = false,
 	intersection_point = noone;
@@ -65,8 +66,8 @@ for (var j=0;j<3;j++) {
 		base_p = (vectors_difference(position, vp)),
 		p_base = (vectors_difference(vp, position));
 		
-	b = 2 * dot_product_3d(velocity[0], velocity[1], velocity[2], base_p[0], base_p[1], base_p[2]);
-	c = dot_product_3d(p_base[0], p_base[1], p_base[2], p_base[0], p_base[1], p_base[2]) - 1;
+	b = 2 * dot(velocity, base_p);
+	c = dot(p_base, p_base) - 1;
 			
 	var root = get_lowest_root(a, b, c, t);
 	if (is_array(root)) {
@@ -80,7 +81,7 @@ for (var j=0;j<3;j++) {
 var edges = [
 	vectors_difference(triangle[1], triangle[0]),
 	vectors_difference(triangle[2], triangle[1]),
-	vectors_difference(triangle[2], triangle[0])
+	vectors_difference(triangle[0], triangle[2])
 ];
 
 // Check against edges
@@ -88,14 +89,14 @@ for (var j=0;j<3;j++) {
 	var edge = edges[j],
 		vp = triangle[j],
 		p_base = vectors_difference(vp, position),
-		edge_squared_length = dot_product_3d(edge[0], edge[1], edge[2], edge[0], edge[1], edge[2]),
-		edge_dot_velocity = dot_product_3d(edge[0], edge[1], edge[2], velocity[0], velocity[1], velocity[2]),
-		edge_dot_pbase = dot_product_3d(edge[0], edge[1], edge[2], p_base[0], p_base[1], p_base[2]);
+		edge_squared_length = dot(edge, edge),
+		edge_dot_velocity = dot(edge, velocity),
+		edge_dot_pbase = dot(edge, p_base);
 		
 	// Calculate parameters for the equation
 	a = edge_squared_length * (-velocity_squared_length) + edge_dot_velocity * edge_dot_velocity;
-	b = edge_squared_length * (2*dot_product_3d(velocity[0],velocity[1],velocity[2],p_base[0],p_base[1],p_base[2])) - 2*edge_dot_velocity*edge_dot_pbase;
-	c = edge_squared_length * (1-dot_product_3d(p_base[0],p_base[1],p_base[2],p_base[0],p_base[1],p_base[2])) + edge_dot_pbase*edge_dot_pbase;
+	b = edge_squared_length * (2*dot(velocity,p_base)) - 2*edge_dot_velocity*edge_dot_pbase;
+	c = edge_squared_length * (1-dot(p_base,p_base)) + edge_dot_pbase*edge_dot_pbase;
 	
 	// Does the sphere collides against an infinite edge?
 	var root = get_lowest_root(a, b, c, t);
@@ -115,7 +116,8 @@ for (var j=0;j<3;j++) {
 if (found_collision) {
 	return [
 		intersection_point,
-		t
+		t,
+		t * vector_length(velocity)
 	];
 }
 

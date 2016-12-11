@@ -10,9 +10,6 @@ if (keyboard_check(ord("A"))){ xTo = -1.0; }
 if (keyboard_check(ord("W"))){ yTo = -1.0; }else 
 if (keyboard_check(ord("S"))){ yTo = 1.0; }
 
-if (keyboard_check(ord("Q"))){ z += 1; requires_update = true; }else
-if (keyboard_check(ord("E"))){ z -= 1; requires_update = true; }
-
 if (xTo != 0 || yTo != 0) {
 	var vec = normalize(xTo, yTo, 0.0);
 	var dir = round((direction_from_vector(vec[0], vec[1]) + (obj_camera.direction + 90)) mod 360);
@@ -27,7 +24,7 @@ if (xTo != 0 || yTo != 0) {
 	];
 	
 	// Apply movement force
-	oc_apply_force(velocity);
+	oc_apply_force(velocity, 1);
 	
 	// Sets the minimum position the player can be
 	base_z = sys_get_height(obj_world.height_map, x, y);
@@ -48,6 +45,15 @@ if (keyboard_check_pressed(vk_space) && jump == 0) {
 // Check if player is on air
 if (base_z < z) {
 	z_gravity = 0.1;
+}
+
+// Debugging tools
+if (keyboard_check(ord("Q"))){ 
+	oc_apply_force([0,0,1], 1);
+	requires_update = true; 
+}else if (keyboard_check(ord("E"))){ 
+	oc_apply_force([0,0,-1], 1);
+	requires_update = true; 
 }
 
 // Place Tree

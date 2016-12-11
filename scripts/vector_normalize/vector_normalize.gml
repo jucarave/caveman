@@ -1,7 +1,5 @@
 /// @description normalizes a 3d Vector
-/// @param x
-/// @param y
-/// @param z
+/// @param vector
 
 var vector = argument[0],
 	

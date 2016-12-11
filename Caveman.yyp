@@ -1217,9 +1217,9 @@
             }
         },
         {
-            "Key": "3c4b5eb5-d155-4d89-8dc6-8e63bbb27abb",
+            "Key": "b59ad924-fa62-416d-a39c-1b3652888e4c",
             "Value": {
-                "id": "b771f79c-19b4-457c-ab34-006df93cc9bd",
+                "id": "169da53e-bc60-4cba-b73d-5ec651724bc9",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -1578,9 +1578,9 @@
             }
         },
         {
-            "Key": "f97a2b82-daf1-430b-b7fd-ad95e05a3ed1",
+            "Key": "40a81ef9-518f-4443-8fa1-8347b0f1cada",
             "Value": {
-                "id": "1d24683d-4bde-4df4-92bf-0c06e2a6ccfb",
+                "id": "69c87c4d-3414-4c1c-9acd-64a68fbf3873",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -1592,8 +1592,27 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "datafiles_yy\\models\\ramp_2t.obj.yy",
-                "resourceType": "GMIncludedFile"
+                "resourcePath": "scripts\\dot\\dot.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "94acc701-af1c-4a1f-b83b-550997097003",
+            "Value": {
+                "id": "7a1f4830-492c-4f06-809d-88682256de6a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\get_normal_plane\\get_normal_plane.yy",
+                "resourceType": "GMScript"
             }
         }
     ],
@@ -1606,8 +1625,10 @@
         "5f8894c5-671b-471c-8f8f-3e0d88e3d057",
         "f46722de-85f0-43fd-8ce7-950c24666dfb",
         "db192afa-475a-49bd-ab31-d87093bf9b2e",
+        "40a81ef9-518f-4443-8fa1-8347b0f1cada",
         "39cb5e52-76bf-4e51-9f01-c20beabd6dea",
         "3f1fd008-baa1-4120-bc0d-ca12adb9f2e5",
+        "94acc701-af1c-4a1f-b83b-550997097003",
         "d809038b-2eca-45fb-8ad3-4f4d25f375a9",
         "fd67467e-e55b-41d4-913f-9aa7910a465f",
         "66ea8b78-18d1-4283-87f7-523974ea4254",
