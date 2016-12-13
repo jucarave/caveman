@@ -1,10 +1,13 @@
 /// @description Inits the global systems
 
 sys_init();
+sys_load_collision_meshes();
 
+// Models to draw
 draw_models = [];
 
-room_goto_next();
+// Collision meshes
+collisions = [];
 
 // Default GMS matrices
 m_projection_ortho = matrix_get(matrix_projection);
@@ -20,3 +23,5 @@ light_update = true;
 
 // Map Terrain
 terrain = pb_terrain(spr_heightmap, 5);
+
+room_goto_next();

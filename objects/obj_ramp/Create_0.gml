@@ -8,7 +8,7 @@ solid_mesh = model[2];
 // 3D model variables
 z = 6.57;
 
-m_world = matrix_build(x, y, z, 0, 0, 0, 1, 1, 1);
+// Subscribe the collision
+sys_subscribe_collision([bounding_box, solid_mesh], [x, y, z]);
 
-// For testing the collision system
-debug_mat = false;
+m_world = matrix_build(x, y, z, 0, 0, 0, 1, 1, 1);

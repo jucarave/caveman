@@ -7,6 +7,15 @@ var position = argument[0],
 	velocity = argument[1],
 	triangle = argument[2];
 	
+// Discard triangle sphere collision by their boxes
+var n_pos = vectors_sum(position, velocity),
+	sphere_bbox = bbox_sphere(position),
+	triangle_bbox = bbox_triangle(triangle);
+	
+if (!bbox_check(sphere_bbox, triangle_bbox)){
+	return noone;
+}
+	
 // Get the plane equation and the signed distance from the sphere to the plane
 var plane = get_triangle_plane(triangle),
 	normal = plane[0],

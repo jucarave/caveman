@@ -1,9 +1,11 @@
 /// @description Moves the current entity through the world checking for collisions
 /// @param velocity vector
 /// @param recursion_depth
+/// @param is_gravity
 
 var velocity = argument[0],
 	recursion_depth = argument[1],
+	is_gravity = argument[2],
 	box_entities = [],
 	xp = x, yp = y, zp = z,
 	found_collision = false,
@@ -15,7 +17,7 @@ if (recursion_depth > 5) {
 	y += velocity[1];
 	z += velocity[2];
 
-	exit;
+	return false;
 }
 
 // Check for box collisions against entities nearby
@@ -25,15 +27,29 @@ x += velocity[0];
 y += velocity[1];
 z += velocity[2];
 
-for (var i=0;i<solid_count;i++) {
+/*for (var i=0;i<solid_count;i++) {
 	var ins = instance_find(obj_solid_entity, i);
 	
 	if (cs_test_boxes(id, ins)) {
 		box_entities[array_length_1d(box_entities)] = ins;
 	}
-}
+}*/
 
-// TODO: also perform box detection with non instances collisions
+var bbox = bbox_move_to_position(bounding_box, [x, y, z]);
+
+// Perform collisions with subscribed collisions
+var cm_count = array_length_1d(obj_system.collisions);
+for (var i=0;i<cm_count;i++) {
+	var collision_ins = obj_system.collisions[i],
+		collision_mesh = collision_ins[0],
+		collision_position = collision_ins[1],
+		collision_bbox = bbox_move_to_position(collision_mesh[0], collision_position),
+		collision_triangles = collision_mesh[1];
+	
+	if (bbox_check(bbox, collision_bbox)) {
+		box_entities[array_length_1d(box_entities)] = [collision_position, collision_triangles];
+	}
+}
 
 // Move the entity to its previous location
 x = xp;
@@ -64,9 +80,10 @@ var es_velocity = [
 var length = array_length_1d(box_entities);
 for (var i=0;i<length;i++) {
 	var ins = box_entities[i],
-		ins_position = [ins.x, ins.y, ins.z];
+		ins_position = ins[0],
+		ins_mesh = ins[1];
 	
-	var hit = cs_test_ellipse_mesh(es_position, ellipse, es_velocity, ins_position, ins.solid_mesh);
+	var hit = cs_test_ellipse_mesh(es_position, ellipse, es_velocity, ins_position, ins_mesh);
 	if (is_array(hit)) {
 		if (!found_collision || hit[2] < collision[2]) {
 			collision = hit;
@@ -81,7 +98,7 @@ if (!found_collision) {
 	y += velocity[1];
 	z += velocity[2];
 	
-	exit;
+	return false;
 }
 
 // If a collision occured
@@ -112,12 +129,17 @@ var new_velocity = vectors_difference(new_destination_point, collision[0]);
 // Recurse:
 
 // Don't recurse if the new velocity is very small
-if (vector_length(new_velocity) < close_distance) {
+var len = vector_length(new_velocity);
+if (len < close_distance) {
 	x = new_position[0] * ellipse[0];
 	y = new_position[1] * ellipse[1];
 	z = (new_position[2] * ellipse[2]) - ellipse[2];
 	
-	exit;
+	if (len == 0) { 
+		return true;
+	}
+	
+	return false;
 }
 
 // Velocity back to R3
@@ -125,4 +147,15 @@ velocity[0] = new_velocity[0] * ellipse[0];
 velocity[1] = new_velocity[1] * ellipse[1];
 velocity[2] = new_velocity[2] * ellipse[2];
 
-oc_apply_force(velocity, recursion_depth + 1);
+// Check if the slide is too steep for gravity 
+if (is_gravity) {
+	var v1 = vector_normalize(velocity),
+		v2 = [0, 0, 1 * sign(v1[2])],
+		dp = dot(v1, v2);
+	
+	if (dp <= 0.70) {
+		return true;
+	} 
+}
+
+return oc_apply_force(velocity, recursion_depth + 1, is_gravity);

@@ -24,47 +24,48 @@ if (xTo != 0 || yTo != 0) {
 	];
 	
 	// Apply movement force
-	oc_apply_force(velocity, 1);
+	var hit = oc_apply_force(velocity, 1, false);
 	
 	// Sets the minimum position the player can be
 	base_z = sys_get_height(obj_world.height_map, x, y);
-	if (base_z > z) { 
-		z = base_z; 
+	
+	// Activate gravity each time the player moves if it didn't hit a surface
+	if (!hit) {
+		z_gravity = 0.1;
 	}
 	
 	requires_update = true;
 }
 
 // Player Jump control
-if (keyboard_check_pressed(vk_space) && jump == 0) {
+if (keyboard_check_pressed(vk_space) && jump == 0 && z_speed > -0.3) {
 	jump = 1;
 	z_speed = 1;
 	z_gravity = 0.1;
 }
 
-// Check if player is on air
-if (base_z < z) {
-	z_gravity = 0.1;
-}
-
-// Debugging tools
-if (keyboard_check(ord("Q"))){ 
-	oc_apply_force([0,0,1], 1);
-	requires_update = true; 
-}else if (keyboard_check(ord("E"))){ 
-	oc_apply_force([0,0,-1], 1);
-	requires_update = true; 
+// Gravity force
+if (z_gravity != 0.0) {
+	z_speed -= z_gravity;
+	requires_update = true
+	var hit = oc_apply_force([0, 0, z_speed], 1, true);
+	
+	if (hit) {
+		z_speed = 0;
+		z_gravity = 0;
+		jump = 0;
+	}
 }
 
 // Place Tree
 if (keyboard_check_pressed(ord("U"))) {
 	var model = obj_world.tree_model;
-	if (irandom(10) < 4) {
+	/*if (irandom(10) < 4) {
 		model = obj_world.tree_model_2;
-	}
+	}*/
 	
-	show_debug_message(base_z);
 	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, base_z, model, true];
+	sys_subscribe_collision(global.COLLISION_MESHES[CM_TREE], [x, y, base_z]);
 }
 
 // Place Fern
