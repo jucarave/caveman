@@ -51,9 +51,12 @@ if (z_gravity != 0.0) {
 	var hit = oc_apply_force([0, 0, z_speed], 1, true);
 	
 	if (hit) {
+		if (z_speed < 0) {
+			z_gravity = 0;
+			jump = 0;
+		}
+		
 		z_speed = 0;
-		z_gravity = 0;
-		jump = 0;
 	}
 }
 

@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "163016ac-c068-470d-8230-a452ca865276",
     "children": [
-        "30c626d1-a295-4a5b-8463-5242cee6334e"
+        "1cab1297-de33-49b2-84c4-cce36a7091ad"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "collision_mesh",

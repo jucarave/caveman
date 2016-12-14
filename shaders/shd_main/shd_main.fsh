@@ -14,13 +14,15 @@ void main() {
 	float distant = length(vPosition - uPlayerPosition);
 	
 	if (lightWeight > 0.0) {
-		if (vLightScreen.x >= 0.0 && vLightScreen.x < 1.0 && vLightScreen.y >= 0.0 && vLightScreen.y < 1.0){
-			float shadowDepth = texture2D(uShadowMap, vLightScreen).r;
-			//float pixelDepth = 1.0 - ((vLightPosition.z / vLightPosition.w) * 0.005);
-			float pixelDepth = 1.0 - vLightPosition.z / vLightPosition.w;
+		float shadowDepth = texture2D(uShadowMap, vLightScreen).r;
+		if (shadowDepth > 0.0) {
+			if (vLightScreen.x >= 0.0 && vLightScreen.x < 1.0 && vLightScreen.y >= 0.0 && vLightScreen.y < 1.0){
+				//float pixelDepth = 1.0 - ((vLightPosition.z / vLightPosition.w) * 0.005);
+				float pixelDepth = 1.0 - vLightPosition.z / vLightPosition.w;
 			
-			if (pixelDepth < shadowDepth - 0.003){
-				lightWeight *= 0.5 * (distant / 50.0);
+				if (pixelDepth < shadowDepth - 0.003){
+					lightWeight *= 0.5 * (distant / 50.0);
+				}
 			}
 		}
 	}
