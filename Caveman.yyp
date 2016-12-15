@@ -1141,9 +1141,9 @@
             }
         },
         {
-            "Key": "01069f1d-fb43-4390-8914-78e138c4a73d",
+            "Key": "dc2fba40-6289-415d-8e05-500f93f4331e",
             "Value": {
-                "id": "81a1e08d-e0b4-465f-bc33-966076c0e2c9",
+                "id": "a980d6e4-4644-457c-beb5-72afbde4e826",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -1804,6 +1804,120 @@
                 "resourcePath": "scripts\\bbox_move_to_position\\bbox_move_to_position.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "b1939272-2ed2-4cbf-b0d4-85dac366f5d9",
+            "Value": {
+                "id": "377083eb-5e21-4c1c-ac5d-ee56ab71242d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "datafiles_yy\\collision_mesh\\tree_2_cm.obj.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "2952122c-d9b9-4986-a8dc-7e8528b9fe96",
+            "Value": {
+                "id": "1e67f337-5d1b-4735-87b0-2e673fbc7949",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\\2952122c-d9b9-4986-a8dc-7e8528b9fe96.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c0b82667-e470-48e0-813d-7a8a017f17fb",
+            "Value": {
+                "id": "e0c14d8d-5dbb-4c17-abb6-ddcbb9f93a04",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\qdt_create\\qdt_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7568538b-152b-4250-9891-5500026d8cbe",
+            "Value": {
+                "id": "03c03c98-6055-4290-b5cd-78dfbf9b1a6a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\qdt_add_instance\\qdt_add_instance.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2b0ccefe-4c00-4958-9181-7ef1c0a37753",
+            "Value": {
+                "id": "68235535-aaf9-47c7-9571-5ecdc1793998",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\qdt_split_node\\qdt_split_node.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a140b97b-c229-4373-9b04-fbc3a4061617",
+            "Value": {
+                "id": "df1c7d2e-0f2b-459c-b3dd-0e2a1ea09d44",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\qdt_get_instance_by_area\\qdt_get_instance_by_area.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -1849,7 +1963,11 @@
         "66ea8b78-18d1-4283-87f7-523974ea4254",
         "40a81ef9-518f-4443-8fa1-8347b0f1cada",
         "39cb5e52-76bf-4e51-9f01-c20beabd6dea",
-        "f46722de-85f0-43fd-8ce7-950c24666dfb"
+        "f46722de-85f0-43fd-8ce7-950c24666dfb",
+        "c0b82667-e470-48e0-813d-7a8a017f17fb",
+        "7568538b-152b-4250-9891-5500026d8cbe",
+        "2b0ccefe-4c00-4958-9181-7ef1c0a37753",
+        "a140b97b-c229-4373-9b04-fbc3a4061617"
     ],
     "tutorial": ""
 }

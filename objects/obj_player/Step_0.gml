@@ -4,6 +4,8 @@
 var xTo = 0,
 	yTo = 0;
 	
+if (keyboard_check(vk_right)){ x += 1; }
+
 if (keyboard_check(ord("D"))){ xTo = 1.0; }else 
 if (keyboard_check(ord("A"))){ xTo = -1.0; }
 
@@ -62,16 +64,24 @@ if (z_gravity != 0.0) {
 
 // Place Tree
 if (keyboard_check_pressed(ord("U"))) {
-	var model = obj_world.tree_model;
-	/*if (irandom(10) < 4) {
+	var model = obj_world.tree_model,
+		col = CM_TREE;
+	if (irandom(10) < 4) {
 		model = obj_world.tree_model_2;
-	}*/
+		col = CM_TREE_2;
+	}
 	
 	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, base_z, model, true];
-	sys_subscribe_collision(global.COLLISION_MESHES[CM_TREE], [x, y, base_z]);
+	sys_subscribe_collision(global.COLLISION_MESHES[col], [x, y, base_z]);
 }
 
 // Place Fern
 if (keyboard_check_pressed(ord("I"))) {
 	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, obj_world.fern, true];
+}
+
+// Debug tools
+if (keyboard_check_pressed(ord("N"))) {
+	show_debug_message("Quad Tree");
+	show_debug_message(obj_world.quadtree);
 }

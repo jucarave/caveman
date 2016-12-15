@@ -4,6 +4,16 @@
 #macro MDL_OFFSET 2
 #macro MDL_CAST_SHADOW 3
 
+// Quad tree
+#macro QDT_DEPTH					0
+#macro QDT_INSTANCES				1
+#macro QDT_NODES					2
+#macro QDT_PARENT					3
+#macro QDT_SIZE						4
+
+#macro QDT_MAX_INSTANCES			5
+#macro QDT_MAX_DEPTH				4
+
 // Vertex format
 vertex_format_begin();
 vertex_format_add_position_3d();

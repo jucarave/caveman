@@ -12,9 +12,9 @@ var n_pos = vectors_sum(position, velocity),
 	sphere_bbox = bbox_sphere(position),
 	triangle_bbox = bbox_triangle(triangle);
 	
-if (!bbox_check(sphere_bbox, triangle_bbox)){
+/*if (!bbox_check(sphere_bbox, triangle_bbox)){
 	return noone;
-}
+}*/
 	
 // Get the plane equation and the signed distance from the sphere to the plane
 var plane = get_triangle_plane(triangle),

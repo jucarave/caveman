@@ -37,10 +37,13 @@ z += velocity[2];
 
 var bbox = bbox_move_to_position(bounding_box, [x, y, z]);
 
-// Perform collisions with subscribed collisions
-var cm_count = array_length_1d(obj_system.collisions);
+// Perform collisions with subscribed collisions on the current quadtree
+var cm_indices = qdt_get_instance_by_area(obj_world.quadtree, [x-1.3,y-1.3,x+1.3,y+1.3]),
+	cm_count = array_length_1d(cm_indices);
+	
 for (var i=0;i<cm_count;i++) {
-	var collision_ins = obj_system.collisions[i],
+	var col_ind = cm_indices[i],
+		collision_ins = obj_system.collisions[col_ind[4]],
 		collision_mesh = collision_ins[0],
 		collision_position = collision_ins[1],
 		collision_bbox = bbox_move_to_position(collision_mesh[0], collision_position),
