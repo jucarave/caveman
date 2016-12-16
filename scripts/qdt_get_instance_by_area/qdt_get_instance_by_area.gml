@@ -6,6 +6,7 @@ var quadtree = argument[0],
 	area = argument[1],
 	
 	ret = [],
+	indices = ds_list_create(),
 	cc = 0;
 	
 if (array_length_1d(quadtree[QDT_NODES]) > 0) {
@@ -16,7 +17,12 @@ if (array_length_1d(quadtree[QDT_NODES]) > 0) {
 			len = array_length_1d(ins);
 			
 		for (var j=0;j<len;j++) {
-			ret[cc++] = ins[j];
+			var det_ins = ins[j];
+			
+			if (ds_list_find_index(indices, det_ins[4]) == -1) {
+				ds_list_add(indices, det_ins[4]);
+				ret[cc++] = det_ins;
+			}
 		}
 	}
 } else {
@@ -31,5 +37,7 @@ if (array_length_1d(quadtree[QDT_NODES]) > 0) {
 	
 	ret = quadtree[QDT_INSTANCES];
 }
+
+ds_list_destroy(indices);
 
 return ret;

@@ -41,6 +41,8 @@ var bbox = bbox_move_to_position(bounding_box, [x, y, z]);
 var cm_indices = qdt_get_instance_by_area(obj_world.quadtree, [x-1.3,y-1.3,x+1.3,y+1.3]),
 	cm_count = array_length_1d(cm_indices);
 	
+obj_system.collisions_count = cm_count;
+	
 for (var i=0;i<cm_count;i++) {
 	var col_ind = cm_indices[i],
 		collision_ins = obj_system.collisions[col_ind[4]],

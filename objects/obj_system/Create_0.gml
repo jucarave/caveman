@@ -9,6 +9,9 @@ draw_models = [];
 // Collision meshes
 collisions = [];
 
+// Collision count
+collisions_count = 0;
+
 // Default GMS matrices
 m_projection_ortho = matrix_get(matrix_projection);
 m_view_ortho = matrix_get(matrix_view);

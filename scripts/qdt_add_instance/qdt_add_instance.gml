@@ -39,8 +39,6 @@ if (array_length_1d(quadtree[@QDT_NODES]) == 0) {
 		
 	for (var i=0;i<4;i++) {
 		var leaf = nodes[@i];
-		if (qdt_add_instance(leaf, instance, area)) {
-			i = 4;
-		}
+		qdt_add_instance(leaf, instance, area);
 	}
 }
