@@ -2,7 +2,7 @@
     "id": "dba1585e-6dfa-4f7f-b49e-fa537d23d2fc",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_solid_entity",
+    "name": "obj_dynamic_entity",
     "eventList": [
         
     ],

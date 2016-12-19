@@ -22,6 +22,9 @@ fern = fern[0];
 trees = [];
 
 // Animals
-instance_create_layer(10, 10, "Instances", obj_animal);
+instance_create_layer(96, 80, "Instances", obj_animal);
+var animal = instance_create_layer(64, 128, "Instances", obj_animal);
+animal.x_vel = 0;
+animal.direction = 45;
 
 m_world = matrix_build_identity();

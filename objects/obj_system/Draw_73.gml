@@ -39,7 +39,7 @@ matrix_set(matrix_view, m_view_ortho);
 draw_surface_ext(light_surface, 0, 0, 128/2048, 128/2048, 0, c_white, 1);
 
 draw_set_color(c_black);
-draw_text(32, 480 - 64, "CIC = " + string(collisions_count));
+draw_text(32, 480 - 48, "CIC = " + string(collisions_count));
 draw_text(32, 480 - 32, "FPS = " + string(fps_real));
 draw_set_color(c_white);
 

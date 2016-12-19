@@ -5,8 +5,8 @@ var model = mdl_load_obj("models/capsule.obj");
 buffer = model[0];
 bounding_box = cs_calculate_bbox(model[1]);
 ellipse_collision = [1, 1, 2.5];
-
-show_debug_message(bounding_box);
+solid_mesh = global.COLLISION_MESHES[CM_CAPSULE];
+solid_mesh = solid_mesh[1];
 
 // Player transform matrix
 m_world = matrix_build_identity();

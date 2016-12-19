@@ -2,7 +2,7 @@
 /// @param lits_of_vertices
 
 var vertices = argument[0],
-	v, x1, y1, z1, x2, y2, z2;
+	v, x1, y1, z1, x2, y2, z2, len;
 
 for (var i=1,len=array_length_1d(vertices);i<len;i++) {
 	v = vertices[i];

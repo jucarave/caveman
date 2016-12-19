@@ -21,19 +21,9 @@ if (recursion_depth > 5) {
 }
 
 // Check for box collisions against entities nearby
-// TODO: Perform this check by area to save memory
-var solid_count = instance_number(obj_solid_entity);
 x += velocity[0];
 y += velocity[1];
 z += velocity[2];
-
-/*for (var i=0;i<solid_count;i++) {
-	var ins = instance_find(obj_solid_entity, i);
-	
-	if (cs_test_boxes(id, ins)) {
-		box_entities[array_length_1d(box_entities)] = ins;
-	}
-}*/
 
 var bbox = bbox_move_to_position(bounding_box, [x, y, z]);
 
@@ -55,6 +45,18 @@ for (var i=0;i<cm_count;i++) {
 		box_entities[array_length_1d(box_entities)] = [collision_position, collision_triangles];
 	}
 }
+
+// Check for collisions against dynamic instances
+var solid_count = instance_number(obj_dynamic_entity);
+for (var i=0;i<solid_count;i++) {
+	var ins = instance_find(obj_dynamic_entity, i);
+	if (ins == id) { continue; }
+	
+	if (cs_test_boxes(id, ins)) {
+		box_entities[array_length_1d(box_entities)] = [[ins.x, ins.y, ins.z], ins.solid_mesh];
+	}
+}
+
 
 // Move the entity to its previous location
 x = xp;

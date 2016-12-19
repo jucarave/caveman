@@ -5,7 +5,8 @@
     "name": "163016ac-c068-470d-8230-a452ca865276",
     "children": [
         "1cab1297-de33-49b2-84c4-cce36a7091ad",
-        "b1939272-2ed2-4cbf-b0d4-85dac366f5d9"
+        "b1939272-2ed2-4cbf-b0d4-85dac366f5d9",
+        "00cd9fc3-2a9f-483d-8897-ec599bf026ae"
     ],
     "filterType": "GMIncludedFile",
     "folderName": "collision_mesh",

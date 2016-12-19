@@ -1421,7 +1421,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "objects\\obj_solid_entity\\obj_solid_entity.yy",
+                "resourcePath": "objects\\obj_dynamic_entity\\obj_dynamic_entity.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1956,6 +1956,63 @@
                 "resourcePath": "scripts\\dbg_draw_quadtree\\dbg_draw_quadtree.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "cc700632-05c2-4cf1-9e41-cdfc862e2aa4",
+            "Value": {
+                "id": "fc4c8497-6d57-45fc-b13d-85b950413056",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "datafiles_yy\\models\\animal.obj.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "00cd9fc3-2a9f-483d-8897-ec599bf026ae",
+            "Value": {
+                "id": "1090d6d8-0dee-40f9-bff4-4a8e63ed9fbf",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "datafiles_yy\\collision_mesh\\casule_cm.obj.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "3ff7ea8e-8952-417a-8b9c-820ec135f74a",
+            "Value": {
+                "id": "db9ce59b-77e9-4786-8f1c-43dea23211ed",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\transform_solid_mesh\\transform_solid_mesh.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -1975,6 +2032,7 @@
         "afde973a-e426-4f78-b557-fea4c4f9f358",
         "732d18e1-c3b9-4799-af7e-06bf24b98a14",
         "a59905b1-2c03-41e5-b77b-9778f11e52a8",
+        "3ff7ea8e-8952-417a-8b9c-820ec135f74a",
         "4523e754-93fe-4f4b-87d4-d581d06d3507",
         "c8b8745e-b542-49ad-a646-d93270d2f4d7",
         "8eb64a20-28c0-4f08-b686-724e0df647e7",

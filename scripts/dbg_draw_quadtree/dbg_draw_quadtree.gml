@@ -39,3 +39,19 @@ if (len == 0) {
 		draw_rectangle(_x, _y, _w, _h, false);
 	}
 }
+
+if (node_depth == 0) {
+	len = instance_number(obj_dynamic_entity);
+	
+	draw_set_color(c_purple);
+	for (var i=0;i<len;i++) {
+		ins = instance_find(obj_dynamic_entity, i);
+		var b = ins.bounding_box;
+		_x = floor(704 + ((ins.x + b[0]) / 208) * 150);
+		_y = floor(0 + ((ins.y + b[1]) / 200) * 150);
+		_w = round(704 + ((ins.x + b[3]) / 208) * 150);
+		_h = round(0 + ((ins.y + b[4]) / 200) * 150);
+		
+		draw_rectangle(_x, _y, _w, _h, false);
+	}
+}

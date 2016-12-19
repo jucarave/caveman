@@ -21,7 +21,8 @@ void main() {
 				float pixelDepth = 1.0 - vLightPosition.z / vLightPosition.w;
 			
 				if (pixelDepth < shadowDepth - 0.003){
-					lightWeight *= 0.5 * (distant / 50.0);
+					//lightWeight *= 0.5 * (distant / 50.0);
+					lightWeight *= 0.5;
 				}
 			}
 		}
