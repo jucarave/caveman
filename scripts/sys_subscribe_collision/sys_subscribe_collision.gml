@@ -3,14 +3,16 @@
 /// @param position
 
 var ind = array_length_1d(obj_system.collisions),
-	mesh = argument[0],
+	mesh_index = argument[0],
+	mesh = global.COLLISION_MESHES[@mesh_index],
 	position = argument[1];
+	
 obj_system.collisions[ind] = [
-	mesh,
+	mesh_index,
 	position
 ];
 
-var bbox = mesh[0],
+var bbox = mesh[@0],
 	area = [
 		position[0] + bbox[0],
 		position[1] + bbox[1],

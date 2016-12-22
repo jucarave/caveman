@@ -71,13 +71,13 @@ if (keyboard_check_pressed(ord("U"))) {
 		col = CM_TREE_2;
 	}
 	
-	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, base_z, model, true];
-	sys_subscribe_collision(global.COLLISION_MESHES[col], [x, y, base_z]);
+	//obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, base_z, model, true];
+	sys_subscribe_collision(col, [x, y, base_z]);
 }
 
 // Place Fern
 if (keyboard_check_pressed(ord("I"))) {
-	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, obj_world.fern, true];
+	obj_world.trees[array_length_1d(obj_world.trees)] = [x, y, z, obj_world.fern, false];
 }
 
 // Debug tools

@@ -26,4 +26,6 @@ light_ortho = create_ortho(200.0, 200.0, -50.0, 50.0);
 // Map Terrain
 terrain = pb_terrain(spr_heightmap, 5);
 
+show_debug_overlay(true);
+
 room_goto_next();

@@ -30,16 +30,18 @@ var bbox = bbox_move_to_position(bounding_box, [x, y, z]);
 // Perform collisions with subscribed collisions on the current quadtree
 var cm_indices = qdt_get_instance_by_area(obj_world.quadtree, [x-1.3,y-1.3,x+1.3,y+1.3]),
 	cm_count = array_length_1d(cm_indices);
-	
-obj_system.collisions_count = cm_count;
+
+if (id == obj_player.id) {
+	obj_system.collisions_count = cm_count;
+}
 	
 for (var i=0;i<cm_count;i++) {
 	var col_ind = cm_indices[i],
 		collision_ins = obj_system.collisions[col_ind[4]],
-		collision_mesh = collision_ins[0],
-		collision_position = collision_ins[1],
+		collision_mesh = global.COLLISION_MESHES[@collision_ins[0]],
+		collision_position = collision_ins[@1],
 		collision_bbox = bbox_move_to_position(collision_mesh[0], collision_position),
-		collision_triangles = collision_mesh[1];
+		collision_triangles = collision_mesh[@1];
 	
 	if (bbox_check(bbox, collision_bbox)) {
 		box_entities[array_length_1d(box_entities)] = [collision_position, collision_triangles];
@@ -57,6 +59,9 @@ for (var i=0;i<solid_count;i++) {
 	}
 }
 
+if (array_length_1d(box_entities) == 0) {
+	return false; 
+}
 
 // Move the entity to its previous location
 x = xp;

@@ -9,6 +9,7 @@ solid_mesh = model[2];
 z = 6.57;
 
 // Subscribe the collision
-sys_subscribe_collision([bounding_box, solid_mesh], [x, y, z]);
+global.COLLISION_MESHES[CM_RAMP] = [bounding_box, solid_mesh];
+sys_subscribe_collision(CM_RAMP, [x, y, z]);
 
 m_world = matrix_build(x, y, z, 0, 0, 0, 1, 1, 1);
