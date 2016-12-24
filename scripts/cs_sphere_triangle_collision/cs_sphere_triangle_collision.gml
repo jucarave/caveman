@@ -9,15 +9,6 @@ var position = argument[0],
 	triangle = argument[2],
 	plane = argument[3];
 	
-// Discard triangle sphere collision by their boxes
-var n_pos = vectors_sum(position, velocity),
-	sphere_bbox = bbox_sphere(position),
-	triangle_bbox = bbox_triangle(triangle);
-	
-/*if (!bbox_check(sphere_bbox, triangle_bbox)){
-	return noone;
-}*/
-	
 // Get the plane equation and the signed distance from the sphere to the plane
 var normal = plane[0],
 	n_dot_vel = dot(velocity, normal),
@@ -63,7 +54,7 @@ if (n_dot_vel != 0) {
 	
 // Check for collision against vertices
 // Quadratic helper
-var velocity_squared_length = dot(velocity, velocity),
+/*var velocity_squared_length = dot(velocity, velocity),
 	a, b, c, t = 1,
 	found_collision = false,
 	intersection_point = noone;
@@ -131,4 +122,4 @@ if (found_collision) {
 	];
 }
 
-return noone;
+return noone;*/
