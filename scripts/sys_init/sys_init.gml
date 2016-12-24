@@ -4,6 +4,12 @@
 #macro MDL_OFFSET 2
 #macro MDL_CAST_SHADOW 3
 
+// Collisions
+#macro CS_MESH_INDEX 0
+#macro CS_MESH_POSITION 1
+#macro CS_LAST_ELLIPSE 2
+#macro CS_PLANES 3
+
 // Quad tree
 #macro QDT_DEPTH					0
 #macro QDT_INSTANCES				1
@@ -39,3 +45,6 @@ global.LIGHT_POSITION_OFFSET = shader_get_uniform(shd_shadow, "uPosition");
 // Commons
 global.NO_OFFSET = [0, 0, 0];
 global.GRID_SIZE = 8;
+
+// ELLIPSES
+global.ELLIPSES_INDICES = [];

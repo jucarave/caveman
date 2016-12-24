@@ -5,11 +5,14 @@
 var ind = array_length_1d(obj_system.collisions),
 	mesh_index = argument[0],
 	mesh = global.COLLISION_MESHES[@mesh_index],
-	position = argument[1];
+	position = argument[1],
+	last_ellipse = -1;
 	
 obj_system.collisions[ind] = [
-	mesh_index,
-	position
+	mesh_index,				// CS_MESH_INDEX
+	position,				// CS_MESH_POSITION
+	last_ellipse,			// CS_LAST_ELLIPSE
+	[]						// CS_PLANES
 ];
 
 var bbox = mesh[@0],

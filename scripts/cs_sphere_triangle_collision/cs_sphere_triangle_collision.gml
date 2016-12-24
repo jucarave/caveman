@@ -2,10 +2,12 @@
 /// @param base_position
 /// @param velocity
 /// @param triangle
+/// @param plane
 
 var position = argument[0],
 	velocity = argument[1],
-	triangle = argument[2];
+	triangle = argument[2],
+	plane = argument[3];
 	
 // Discard triangle sphere collision by their boxes
 var n_pos = vectors_sum(position, velocity),
@@ -17,8 +19,7 @@ var n_pos = vectors_sum(position, velocity),
 }*/
 	
 // Get the plane equation and the signed distance from the sphere to the plane
-var plane = get_triangle_plane(triangle),
-	normal = plane[0],
+var normal = plane[0],
 	n_dot_vel = dot(velocity, normal),
 	psd = plane_signed_distance(position, normal, plane[1]),
 	t0 = 0, t1 = 1;

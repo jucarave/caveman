@@ -9,7 +9,9 @@ var velocity = argument[0],
 	box_entities = [],
 	xp = x, yp = y, zp = z,
 	found_collision = false,
-	collision = noone;
+	collision = noone,
+	ellipse = ellipse_collision,
+	ellipse_index = sys_register_ellipse(ellipse);
 	
 // After 5 iterations it doesn't matter much if the instance is still colliding
 if (recursion_depth > 5) {
@@ -38,26 +40,29 @@ if (id == obj_player.id) {
 for (var i=0;i<cm_count;i++) {
 	var col_ind = cm_indices[i],
 		collision_ins = obj_system.collisions[col_ind[4]],
-		collision_mesh = global.COLLISION_MESHES[@collision_ins[0]],
-		collision_position = collision_ins[@1],
-		collision_bbox = bbox_move_to_position(collision_mesh[0], collision_position),
-		collision_triangles = collision_mesh[@1];
+		collision_mesh = global.COLLISION_MESHES[@collision_ins[CS_MESH_INDEX]],
+		collision_position = collision_ins[@CS_MESH_POSITION],
+		collision_bbox = bbox_move_to_position(collision_mesh[0], collision_position);
+		
+	if (collision_ins[@CS_LAST_ELLIPSE] != ellipse_index) {
+		collision_ins[@CS_LAST_ELLIPSE] = -1;
+	}
 	
 	if (bbox_check(bbox, collision_bbox)) {
-		box_entities[array_length_1d(box_entities)] = [collision_position, collision_triangles];
+		box_entities[array_length_1d(box_entities)] = collision_ins;
 	}
 }
 
 // Check for collisions against dynamic instances
 var solid_count = instance_number(obj_dynamic_entity);
-for (var i=0;i<solid_count;i++) {
+/*for (var i=0;i<solid_count;i++) {
 	var ins = instance_find(obj_dynamic_entity, i);
 	if (ins == id) { continue; }
 	
 	if (cs_test_boxes(id, ins)) {
 		box_entities[array_length_1d(box_entities)] = [[ins.x, ins.y, ins.z], ins.solid_mesh];
 	}
-}
+}*/
 
 if (array_length_1d(box_entities) == 0) {
 	return false; 
@@ -70,7 +75,6 @@ z = zp;
 
 // Collision utils
 var position = [x, y, z];
-var ellipse = ellipse_collision;
 
 // Center the ellipse in the instance
 position[2] += ellipse[2];	
@@ -91,15 +95,15 @@ var es_velocity = [
 // Check for collision detection with all the triangles of each possible collider
 var length = array_length_1d(box_entities);
 for (var i=0;i<length;i++) {
-	var ins = box_entities[i],
-		ins_position = ins[0],
-		ins_mesh = ins[1];
+	var ins = box_entities[i];
 	
-	var hit = cs_test_ellipse_mesh(es_position, ellipse, es_velocity, ins_position, ins_mesh);
+	var hit = cs_test_ellipse_mesh(es_position, ellipse, es_velocity, ins);
 	if (is_array(hit)) {
 		if (!found_collision || hit[2] < collision[2]) {
 			collision = hit;
 			found_collision = true;
+			
+			ins[@CS_LAST_ELLIPSE] = ellipse_index;
 		}
 	}
 }

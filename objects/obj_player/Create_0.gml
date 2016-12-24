@@ -8,6 +8,8 @@ ellipse_collision = [1, 1, 2.5];
 solid_mesh = global.COLLISION_MESHES[CM_CAPSULE];
 solid_mesh = solid_mesh[1];
 
+sys_register_ellipse(ellipse_collision);
+
 // Player transform matrix
 m_world = matrix_build_identity();
 

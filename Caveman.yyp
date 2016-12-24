@@ -2013,6 +2013,25 @@
                 "resourcePath": "scripts\\transform_solid_mesh\\transform_solid_mesh.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "9f86a376-6839-4777-ae79-51a999e7a2e4",
+            "Value": {
+                "id": "0a2d5fb4-dba8-48c9-bc71-98faaafd318a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\sys_register_ellipse\\sys_register_ellipse.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -2043,6 +2062,7 @@
         "27d040e0-c877-4838-99e0-cc817646a586",
         "7d608409-7695-4d17-96a9-c9ab59e892e3",
         "a3466ea0-285a-4b67-8cfc-e5a544983b05",
+        "9f86a376-6839-4777-ae79-51a999e7a2e4",
         "8f6fa962-93ee-435e-8b94-d9ca449b91ff",
         "42040bd0-997f-4b43-8dd2-dfc29e5cd43d",
         "fca7a9df-c90e-492c-884e-54f3372ec8d5",
