@@ -63,9 +63,9 @@ for (var i=0;i<solid_count;i++) {
 	if (cs_test_boxes(id, ins)) {
 		var collision_ins = ins.collision_data;
 	
-		if (collision_ins[@CS_LAST_ELLIPSE] != ellipse_index) {
+		//if (collision_ins[@CS_LAST_ELLIPSE] != ellipse_index) {
 			collision_ins[@CS_LAST_ELLIPSE] = -1;
-		}
+		//}
 		
 		box_entities[array_length_1d(box_entities)] = collision_ins;
 	}
