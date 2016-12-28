@@ -7,6 +7,8 @@ solid_base = model[2];
 bounding_box = cs_calculate_bbox(solid_mesh);
 ellipse_collision = [3, 3, 1.5];
 
+sys_register_ellipse(ellipse_collision);
+
 m_world = matrix_build_identity();
 
 previous_direction = 0;
@@ -20,3 +22,11 @@ z_gravity = 0.0;
 
 // Debug movement
 x_vel = 0.1;
+
+// Collision data
+collision_data = [
+	solid_mesh,
+	[x, y, z],
+	-1,
+	[]
+];

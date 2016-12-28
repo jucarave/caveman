@@ -6,3 +6,5 @@ m_world = matrix_build(
 	0, 0, direction,
 	1, 1, 1
 );
+
+collision_data[@CS_MESH_POSITION] = [x, y, z];

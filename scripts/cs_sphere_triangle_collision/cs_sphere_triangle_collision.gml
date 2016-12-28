@@ -54,7 +54,7 @@ if (n_dot_vel != 0) {
 	
 // Check for collision against vertices
 // Quadratic helper
-/*var velocity_squared_length = dot(velocity, velocity),
+var velocity_squared_length = dot(velocity, velocity),
 	a, b, c, t = 1,
 	found_collision = false,
 	intersection_point = noone;
@@ -122,4 +122,4 @@ if (found_collision) {
 	];
 }
 
-return noone;*/
+return noone;

@@ -32,3 +32,11 @@ jump = 0;
 direction = 270;
 rotate_to = 270;
 rotate_spd = 0;
+
+// Collision data
+collision_data = [
+	solid_mesh,
+	[x, y, z],
+	-1,
+	[]
+];

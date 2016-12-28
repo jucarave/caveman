@@ -44,25 +44,32 @@ for (var i=0;i<cm_count;i++) {
 		collision_position = collision_ins[@CS_MESH_POSITION],
 		collision_bbox = bbox_move_to_position(collision_mesh[0], collision_position);
 		
-	if (collision_ins[@CS_LAST_ELLIPSE] != ellipse_index) {
-		collision_ins[@CS_LAST_ELLIPSE] = -1;
-	}
-	
 	if (bbox_check(bbox, collision_bbox)) {
+		if (collision_ins[@CS_LAST_ELLIPSE] != ellipse_index) {
+			collision_ins[@CS_LAST_ELLIPSE] = -1;
+		}
+	
+		collision_ins[CS_MESH_INDEX] = collision_mesh[@1];
 		box_entities[array_length_1d(box_entities)] = collision_ins;
 	}
 }
 
 // Check for collisions against dynamic instances
 var solid_count = instance_number(obj_dynamic_entity);
-/*for (var i=0;i<solid_count;i++) {
+for (var i=0;i<solid_count;i++) {
 	var ins = instance_find(obj_dynamic_entity, i);
 	if (ins == id) { continue; }
 	
 	if (cs_test_boxes(id, ins)) {
-		box_entities[array_length_1d(box_entities)] = [[ins.x, ins.y, ins.z], ins.solid_mesh];
+		var collision_ins = ins.collision_data;
+	
+		if (collision_ins[@CS_LAST_ELLIPSE] != ellipse_index) {
+			collision_ins[@CS_LAST_ELLIPSE] = -1;
+		}
+		
+		box_entities[array_length_1d(box_entities)] = collision_ins;
 	}
-}*/
+}
 
 if (array_length_1d(box_entities) == 0) {
 	return false; 

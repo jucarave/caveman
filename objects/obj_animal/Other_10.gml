@@ -12,4 +12,8 @@ if (direction != previous_direction) {
 	bounding_box = cs_calculate_bbox(solid_mesh);
 	
 	previous_direction = direction;
+	
+	collision_data[@CS_MESH_INDEX] = solid_mesh;
 }
+
+collision_data[@CS_MESH_POSITION] = [x, y, z];

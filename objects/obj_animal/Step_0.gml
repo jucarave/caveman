@@ -2,7 +2,6 @@
 base_z = sys_get_height(obj_world.height_map, x, y);
 
 if (x_vel == 0) { exit; }
-exit;
 
 var hit = oc_apply_force([x_vel, 0, 0], 1, false);
 
