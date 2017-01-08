@@ -1084,9 +1084,9 @@
             }
         },
         {
-            "Key": "2604b6f7-45ec-494e-9722-b96f88e21180",
+            "Key": "01634115-ea86-497f-890f-107d1d2b2af2",
             "Value": {
-                "id": "c0758f08-451e-465f-a845-f55f7705a3ec",
+                "id": "d643a0e0-4e6e-4b8a-b564-95538bad686d",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -2031,6 +2031,25 @@
                 ],
                 "resourcePath": "scripts\\sys_register_ellipse\\sys_register_ellipse.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8cb78249-88a1-4450-bd2f-e16160222f99",
+            "Value": {
+                "id": "ba7f7716-e7fe-4f32-82b9-680d25124283",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "datafiles_yy\\models\\champion_mock.obj.yy",
+                "resourceType": "GMIncludedFile"
             }
         }
     ],

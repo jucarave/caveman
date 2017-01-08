@@ -9,7 +9,7 @@ var filename = argument[0],
 	normals = [0],
 	materials = [0],
 	triangles = [],
-	order = [0, 1, 2];
+	order = [0, 2, 1];
 
 if (!file_exists(filename)){
 	show_message("Model [" + filename + "] was not found!");
@@ -31,9 +31,15 @@ while (!file_text_eof(file)) {
 	line = string_replace_all(line, type, "");
 	
 	if (type == "v ") {
-		vertices[array_length_1d(vertices)] = string_explode_real(line, " ");
+		var args = string_explode_real(line, " ");
+		args[1] *= -1; // Blender LH to gms2 RH
+		
+		vertices[array_length_1d(vertices)] = args;
 	}else if (type == "vn") {
-		normals[array_length_1d(normals)] = string_explode_real(line, " ");
+		var args = string_explode_real(line, " ");;
+		args[1] *= -1; // Blender LH to gms2 RH
+		
+		normals[array_length_1d(normals)] = args;
 	}else if (type == "mt") {
 		mat = string_explode(line, " ");
 		
