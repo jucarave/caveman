@@ -6,6 +6,8 @@ plane = mdl_load_obj("landscape/landscape.obj");
 height_map = sys_grid_from_vertices(plane[1], 26, 25);
 plane = plane[0];
 
+mdl_load_tileset("dungeon");
+
 // Quadtree
 quadtree = qdt_create(0, [0, 0, 208, 200]);
 

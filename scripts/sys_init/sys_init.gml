@@ -4,6 +4,9 @@
 #macro MDL_OFFSET 2
 #macro MDL_CAST_SHADOW 3
 
+// Models
+#macro MODEL_CHAMPION "champion"
+
 // Collisions
 #macro CS_MESH_INDEX 0
 #macro CS_MESH_POSITION 1

@@ -3,6 +3,9 @@
 sys_init();
 sys_load_collision_meshes();
 
+// Game models
+models = ds_map_create();
+
 // Models to draw
 draw_models = [];
 

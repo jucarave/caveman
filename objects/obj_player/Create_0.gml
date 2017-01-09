@@ -1,7 +1,7 @@
 /// @description Creates the model and 3D variables
 
 // Player model
-var model = mdl_load_obj("models/champion_mock.obj");
+var model = mdl_get_model(MODEL_CHAMPION);
 buffer = model[0];
 bounding_box = cs_calculate_bbox(model[1]);
 ellipse_collision = [1, 1, 2.5];
