@@ -5,6 +5,10 @@ var tileset_code = argument[0],
 	filename = "tilesets/" + tileset_code + ".json",
 	json_string = "";
 	
+if (obj_system.tileset != noone && obj_system.tileset[? "name"] == tileset_code) {
+	return obj_system.tileset;
+}
+	
 if (!file_exists(filename)) {
 	show_message("Tileset [" + tileset_code + "] doesn't exists!");
 	game_end();
@@ -19,17 +23,11 @@ while (!file_text_eof(file)) {
 
 file_text_close(file);
 
-var json_object = json_decode(json_string),
-	floats = json_object[? "floats"],
-	materials = json_object[? "materials"],
-	
-	objects = json_object[? "objects"],
-	objects_length = ds_list_size(objects);
-	
-for (var i=0;i<objects_length;i++) {
-	var obj = objects[| i];
-	
-	
+var json_object = json_decode(json_string);
+
+if (obj_system.tileset != noone) {
+	ds_map_destroy(obj_system.tileset);
+	obj_system.tileset = json_object;
 }
 
-ds_map_destroy(json_object);
+return json_object;

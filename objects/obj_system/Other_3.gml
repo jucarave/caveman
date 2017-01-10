@@ -4,7 +4,9 @@ if (surface_exists(light_surface)) {
 	surface_free(light_surface);
 }
 
-ds_grid_destroy(obj_world.height_map);
+if (instance_exists(obj_world)) {
+	ds_grid_destroy(obj_world.height_map);
+}
 
 // Clear models memory
 var size = ds_map_size(models),
@@ -19,3 +21,8 @@ for (var i=0;i<size;i++) {
 }
 
 ds_map_destroy(models);
+
+// Clear current tileset
+if (tileset != noone) {
+	ds_map_destroy(tileset);
+}

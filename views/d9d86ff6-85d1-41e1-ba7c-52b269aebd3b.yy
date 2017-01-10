@@ -16,7 +16,8 @@
         "afde973a-e426-4f78-b557-fea4c4f9f358",
         "732d18e1-c3b9-4799-af7e-06bf24b98a14",
         "a59905b1-2c03-41e5-b77b-9778f11e52a8",
-        "3ff7ea8e-8952-417a-8b9c-820ec135f74a"
+        "3ff7ea8e-8952-417a-8b9c-820ec135f74a",
+        "6686086b-3c1f-4967-bf8c-3f2a5f03d02c"
     ],
     "filterType": "GMScript",
     "folderName": "utils",

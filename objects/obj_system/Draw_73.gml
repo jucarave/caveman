@@ -43,4 +43,4 @@ draw_text(32, 480 - 48, "CIC = " + string(collisions_count));
 draw_text(32, 480 - 32, "FPS = " + string(fps_real));
 draw_set_color(c_white);
 
-dbg_draw_quadtree(obj_world.quadtree);
+//dbg_draw_quadtree(obj_world.quadtree);

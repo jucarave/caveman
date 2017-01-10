@@ -7,7 +7,8 @@
         "abb58cbb-3745-442c-8e63-982411580a8e",
         "39702d51-db67-43c2-9214-41efc85752de",
         "10e27a06-ea45-4796-ace0-05eb0523e645",
-        "d062f9d4-15dd-4a1f-bc3c-fae46ee2d686"
+        "d062f9d4-15dd-4a1f-bc3c-fae46ee2d686",
+        "a9866747-9ab5-4df9-945b-bcdb573a30a0"
     ],
     "filterType": "GMObject",
     "folderName": "world",

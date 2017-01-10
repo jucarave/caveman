@@ -30,7 +30,8 @@ z += velocity[2];
 var bbox = bbox_move_to_position(bounding_box, [x, y, z]);
 
 // Perform collisions with subscribed collisions on the current quadtree
-var cm_indices = qdt_get_instance_by_area(obj_world.quadtree, [x-1.3,y-1.3,x+1.3,y+1.3]),
+//var cm_indices = qdt_get_instance_by_area(obj_world.quadtree, [x-1.3,y-1.3,x+1.3,y+1.3]),
+var cm_indices = obj_dungeon.instances,
 	cm_count = array_length_1d(cm_indices);
 
 if (id == obj_player.id) {

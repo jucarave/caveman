@@ -2072,9 +2072,9 @@
             }
         },
         {
-            "Key": "dca0633b-7c80-43a8-8e7a-894875d1161c",
+            "Key": "9f40cf61-3052-456c-bf35-2ffec6be60ba",
             "Value": {
-                "id": "1b9a3ef1-92c0-4122-a61b-c55d4d7b0686",
+                "id": "e476cf4d-06c8-458b-9e2c-d8ee9903a798",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -2146,6 +2146,63 @@
                 "resourcePath": "scripts\\mdl_delete\\mdl_delete.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "a9866747-9ab5-4df9-945b-bcdb573a30a0",
+            "Value": {
+                "id": "14eaa555-e1cb-48ed-9b62-a033072f154d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\\obj_dungeon\\obj_dungeon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "844db873-04dd-4579-80ba-3e741606c167",
+            "Value": {
+                "id": "d89d2bbc-f337-418d-b1e9-7098e7b3c161",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\mdl_create_tileset\\mdl_create_tileset.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6686086b-3c1f-4967-bf8c-3f2a5f03d02c",
+            "Value": {
+                "id": "9f509ac9-4262-4db7-9565-2a347e47da7f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\matrix_vec4_mult\\matrix_vec4_mult.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -2166,6 +2223,7 @@
         "732d18e1-c3b9-4799-af7e-06bf24b98a14",
         "a59905b1-2c03-41e5-b77b-9778f11e52a8",
         "3ff7ea8e-8952-417a-8b9c-820ec135f74a",
+        "6686086b-3c1f-4967-bf8c-3f2a5f03d02c",
         "4523e754-93fe-4f4b-87d4-d581d06d3507",
         "c8b8745e-b542-49ad-a646-d93270d2f4d7",
         "8eb64a20-28c0-4f08-b686-724e0df647e7",
@@ -2180,6 +2238,7 @@
         "8f6fa962-93ee-435e-8b94-d9ca449b91ff",
         "42040bd0-997f-4b43-8dd2-dfc29e5cd43d",
         "7d2a485d-a13d-4055-8f2e-35c3321f435d",
+        "844db873-04dd-4579-80ba-3e741606c167",
         "fca7a9df-c90e-492c-884e-54f3372ec8d5",
         "7babeead-874e-4a8a-bfcd-df1ff1559823",
         "b0ecb877-4451-4c51-a1dc-ca6438cd4db6",

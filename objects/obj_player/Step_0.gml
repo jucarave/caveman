@@ -29,7 +29,11 @@ if (xTo != 0 || yTo != 0) {
 	var hit = oc_apply_force(velocity, 1, false);
 	
 	// Sets the minimum position the player can be
-	base_z = sys_get_height(obj_world.height_map, x, y);
+	if (instance_exists(obj_world)) {
+		base_z = sys_get_height(obj_world.height_map, x, y);
+	} else {
+		base_z = 0;
+	}
 	
 	// Activate gravity each time the player moves if it didn't hit a surface
 	if (!hit) {

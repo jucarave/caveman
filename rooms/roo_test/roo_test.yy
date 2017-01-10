@@ -11,8 +11,7 @@
     "instanceCreationOrderIDs": [
         "75353c99-d7d9-467f-994c-844c228c0c48",
         "528c519d-edbf-4135-bd78-d9946ae1b36f",
-        "8ecacef1-f4e8-4d0d-a808-4e85fc4d99d5",
-        "96670893-5f6e-4a2c-8318-7611b3a664dd"
+        "ec25b07c-d642-42cb-acde-c9aa22558482"
     ],
     "layers": [
         {
@@ -85,14 +84,14 @@
                     "scaleY": 1
                 },
                 {
-                    "id": "8ecacef1-f4e8-4d0d-a808-4e85fc4d99d5",
+                    "id": "ec25b07c-d642-42cb-acde-c9aa22558482",
                     "modelName": "GMRInstance",
                     "mvc": "1.0",
                     "ignore": false,
                     "inheritItemSettings": false,
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
-                    "name": "inst_4A15C4C7",
+                    "name": "inst_75C1EB30",
                     "x": 288,
                     "y": 0,
                     "IsDnD": false,
@@ -102,32 +101,8 @@
                     "creationCodeFile": "",
                     "creationCodeType": "",
                     "inheritCode": false,
-                    "name_with_no_file_rename": "inst_4A15C4C7",
-                    "objId": "39702d51-db67-43c2-9214-41efc85752de",
-                    "rotation": 0,
-                    "scaleX": 1,
-                    "scaleY": 1
-                },
-                {
-                    "id": "96670893-5f6e-4a2c-8318-7611b3a664dd",
-                    "modelName": "GMRInstance",
-                    "mvc": "1.0",
-                    "ignore": false,
-                    "inheritItemSettings": false,
-                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
-                    "m_serialiseFrozen": false,
-                    "name": "inst_342302D4",
-                    "x": 101,
-                    "y": 129,
-                    "IsDnD": false,
-                    "colour": {
-                        "Value": 4294967295
-                    },
-                    "creationCodeFile": "",
-                    "creationCodeType": "",
-                    "inheritCode": false,
-                    "name_with_no_file_rename": "inst_342302D4",
-                    "objId": "d062f9d4-15dd-4a1f-bc3c-fae46ee2d686",
+                    "name_with_no_file_rename": "inst_75C1EB30",
+                    "objId": "a9866747-9ab5-4df9-945b-bcdb573a30a0",
                     "rotation": 0,
                     "scaleX": 1,
                     "scaleY": 1
@@ -157,7 +132,7 @@
             "animationFPS": 15,
             "animationSpeedType": 0,
             "colour": {
-                "Value": 4294967295
+                "Value": 4278190080
             },
             "hspeed": 0,
             "htiled": false,
